@@ -1,0 +1,21 @@
+body{
+background: black;
+position: absolute;
+left: 10%;
+top: 5%;
+color:orange;
+font-family: Verdana;
+}
+
+input{
+    height:25px;
+    width: 150px;
+    font-size: 20px;
+    font-family: Verdana;
+    color:orange
+
+}
+
+button{
+    font-size:large
+}
