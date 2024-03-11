@@ -1,0 +1,40 @@
+body {
+
+    font-size: 20px;
+    padding-top: 100px;
+    font-family: Helvetica;
+    max-width: 600px;
+    margin: auto;
+    max-height: 600px;
+}
+
+tbody{
+
+    font-size: 40px;
+    background-color: rgb(230, 173, 141);
+    position: relative;
+    left:50px;
+    font-family: Helvetica;
+    letter-spacing: 1rem;
+    text-align: center;
+    padding:2rem;
+
+
+}
+
+.msg {
+    color: green
+}
+
+button{
+    border-radius: 4px;
+    height:30px;
+    width: 100px;
+    background-color: transparent;
+    border-color: black;
+    border-width: 3px;
+}
+
+input {
+    height:30px;
+}
