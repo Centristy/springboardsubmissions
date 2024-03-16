@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<button id="newuser" class="btn btn-primary m-5 " type="button" data-toggle="modal" data-target="#petadd">
+    Add a Pet
+</button>
+
+
+<div class="modal fade" id="petadd" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form method="POST" id="new_deck">
+                {{ form.hidden_tag() }}
+                {% for field in form if field.widget.input_type != 'hidden'  %}
+                {% for error in field.errors %}
+                    <span class="text-danger">{{ error }}</span>
+                {% endfor %}
+
+                {{field.label.text}}: {{ field (class="form-group") }}
+
+                <br>
+                {% endfor %}
+                <br>
+                <button class="btn btn-success btn-lg btn-block">Add New Pet</button>
+            </form>
+        </div>
+    </div>
+</div>  
+
+
+{% endblock %}

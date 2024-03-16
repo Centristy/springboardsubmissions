@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row col-4 modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content editpet">
+        <form method="POST" id="edit-modal">
+            {{ form.hidden_tag() }}
+            {% for field in form if field.widget.input_type != 'hidden' %}
+            {% for error in field.errors %}
+                <span class="text-danger">{{ error }}</span>
+            {% endfor %}
+            {{field.label.text}}: {{ field(placeholder=field.label.text, class="form-group") }}
+            <br>
+            {% endfor %}
+            <button class="btn btn-success btn-lg">Edit Animal</button>
+            
+            
+        </form>
+        <a href="/"><button class="btn btn-secondary btn-lg">Cancel</button></a><a href="/delete/{{ pet.id }}"><button class="btn btn-danger btn-lg">Delete Pet</button></a>   
+    </div>
+</div>
+
+
+
+{% endblock %}
