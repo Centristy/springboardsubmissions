@@ -1,0 +1,17 @@
+.Pokecard{
+    background-color: rgb(221, 220, 211);
+    height: 250px;
+    padding: 15px;
+    width: 150px;
+    float: left;
+    justify-content: space-evenly;
+    margin: 10px;
+    border-radius: 10px;
+    border: 4px solid gold;
+}
+
+h4{
+    color: blue
+}
+
+
