@@ -1,0 +1,48 @@
+form{
+
+    background-color: rgb(189, 186, 186);
+    font-size: 15 px;
+    width: 500px;
+    align-self:center;
+    margin: 5px;
+    padding: 15px;
+    
+
+}
+
+input{
+    height: 20px;
+    margin: 5px;
+}
+
+select{
+    height:20px;
+    margin:5px;
+
+}
+
+.card{
+    width:300px;
+    align-items: center;
+    padding:10px;
+    height: 400px;
+    float: left;
+    background-color: rgb(173, 235, 235);
+    margin: 5px;
+    border-radius:5px;
+    border: 4px solid black;
+
+}
+
+.edit-cupcake-form{
+    width:300px;
+    align-items: center;
+    padding:10px;
+    height: 400px;
+    float: left;
+    background-color: rgb(173, 235, 235);
+    margin: 5px;
+    border-radius:5px;
+    border: 4px solid black;
+
+}

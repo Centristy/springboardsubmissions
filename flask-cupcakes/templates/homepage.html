@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cupcakes</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>See all the cupcakes!</h1>
+
+<ul id="cupcakes-list">
+</ul>
+
+<h2>Add a new cupcake!</h2>
+
+<form method="POST" id="new-cupcake-form">
+
+    {{ form.hidden_tag() }}
+
+    {% for field in form if field.widget.input_type != 'hidden' %}
+    {% for error in field.errors %}
+        <span class="text-danger">{{ error }}</span>
+    {% endfor %}
+    {{ field(placeholder=field.label.text, class=field.lable) }}
+    <br>
+    {% endfor %}
+
+
+    <button>Add!</button>
+</form>
+
+{%for cupcake in cupcakes%}
+<div class="card">
+    <p>{{cupcake.flavor}}</p>
+    <img width="200px" height="200px" src="{{cupcake.image}}">
+    <p> Rating: {{cupcake.rating}}</p>
+    <p> Size: {{cupcake.size}}</p>
+    <a href="/cupcake/delete/{{ cupcake.id }}" type="button">Delete</a>
+    <a href="/cupcake/edit/{{ cupcake.id }}" type="button">Edit</a>
+
+</div>
+
+{% endfor %}
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="/static/cupcake.js"></script>
+
+</body>
+</html>
+

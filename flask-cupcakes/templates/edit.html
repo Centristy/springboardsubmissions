@@ -1,0 +1,19 @@
+
+<link rel="stylesheet" href="/static/style.css">
+
+<form width="300px" height="400px" method="POST" id="edit-cupcake-form">
+
+    {{ form.hidden_tag() }}
+
+    {% for field in form if field.widget.input_type != 'hidden' %}
+    {% for error in field.errors %}
+        <span class="text-danger">{{ error }}</span>
+    {% endfor %}
+    {{ field(placeholder=field.label.text, class=field.lable) }}
+    <br>
+    {% endfor %}
+
+
+    <button>Edit</button>
+
+</form>
