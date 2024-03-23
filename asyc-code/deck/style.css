@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(14, 161, 14);
+    align-items: center;
+}
+
+
+button{
+    padding: 15px;
+    background-color: grey;
+    color: white;
+    border-radius: 15px;
+    font-size:20px;
+}
+
+#card-area {
+    margin-top: 100px;
+}
+
+#card-area > img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+  
