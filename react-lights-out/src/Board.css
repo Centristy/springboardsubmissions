@@ -1,0 +1,20 @@
+.Board {
+position: absolute;
+left:35%;
+top:10%
+}
+
+.win {
+  position: absolute;
+  left:35%;
+  top:30%;
+  font-size: 40px;
+  font-weight:300;
+  font-family:Arial;
+  color: red;
+  }
+
+.click {
+  font-weight:300;
+  font-size:25px;
+}
